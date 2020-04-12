@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Failed" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:04:02Z" duration="205.3370394">
+    <command-line><![CDATA[test commandline that ran the unit tests]]></command-line>
+    <test-suite type="TestSuite" id="1000" name="testName-1000" fullname="testFullName-1000" runstate="Runnable" testcasecount="3" result="Failed" label="Error" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:04:02Z" duration="205.337039" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <environment os-version="testOS,1.0" />
+        <properties />
+        <reason>
+            <message><![CDATA[One or more child tests failed]]></message>
+        </reason>
+        <test-suite type="SetUpFixture" id="1001" name="testName-1001" fullname="testFullName-1001" classname="testClassName-1001" runstate="Runnable" testcasecount="3" result="Failed" label="Error" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:40Z" duration="3.112318" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties>
+                <property name="_PID" value="15239" />
+                <property name="_APPDOMAIN" value="testAppDomain" />
+            </properties>
+            <reason>
+                <message><![CDATA[One or more child tests failed]]></message>
+            </reason>
+            <test-suite type="TestSuite" id="1582" name="testName-1582" fullname="testFullName-1582" runstate="Runnable" testcasecount="3" result="Failed" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:37Z" duration="0.046212" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-suite type="TestFixture" id="1420" name="testName-1420" fullname="testFullName-1420" classname="testClassName-1420" runstate="Runnable" testcasecount="3" result="Failed" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:37Z" duration="0.043630" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+                    <properties />
+                    <test-case id="1421" name="testName-1421" fullname="testName-1421" methodname="testMethodName-1421" classname="testClassName-1421" runstate="Runnable" seed="663782990" result="Passed" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:37Z" duration="0.030702" asserts="0">
+                        <properties />
+                    </test-case>
+                    <test-case id="1422" name="testName-1422" fullname="testName-1422" methodname="testMethodName-1422" classname="testClassName-1422" runstate="Runnable" seed="663782991" result="Failed" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:37Z" duration="0.030702" asserts="0">
+                        <properties />
+                        <failure>
+                            <message><![CDATA[this test failed]]></message>
+                            <stack-trace><![CDATA[this is a test stack trace]]></stack-trace>
+                        </failure>
+                    </test-case>
+                    <test-case id="1423" name="testName-1423" fullname="testName-1423" methodname="testMethodName-1423" classname="testClassName-1423" runstate="Runnable" seed="663782992" result="Failed" start-time="2020-04-11 02:00:37Z" end-time="2020-04-11 02:00:37Z" duration="0.030702" asserts="0">
+                        <properties />
+                        <failure>
+                            <message><![CDATA[this test also failed]]></message>
+                            <stack-trace><![CDATA[this is also a test stack trace]]></stack-trace>
+                        </failure>
+                    </test-case>
+                </test-suite>
+            </test-suite>
+        </test-suite>
+    </test-suite>
+</test-run>

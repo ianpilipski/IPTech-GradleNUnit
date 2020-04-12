@@ -1,0 +1,39 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '0.10.1'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+version "1.0.0"
+group 'com.iptech.gradle'
+description = 'A plugin that allows you work with NUnit output'
+
+pluginBundle {
+    website = 'https://github.com/ianpilipski'
+    vcsUrl = 'https://github.com/ianpilipski/IPTech-GradleNUnit'
+    tags = ['nunit', 'iptech']
+}
+
+gradlePlugin {
+    plugins {
+        nunitPlugin {
+            id = 'com.iptech.gradle.nunit-plugin'
+            displayName = 'IPTech NUnit Plugin'
+            description = 'A plugin that allows you parse NUnit xml output'
+            implementationClass = 'com.iptech.gradle.nunit.NUnitPlugin'
+        }
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+}
