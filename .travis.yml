@@ -16,3 +16,9 @@ cache:
 
 script:
   - ./gradlew build
+
+deploy:
+  provider: script
+  script: ./gradlew publishPlugins
+  on:
+    branch: master AND tag IS present

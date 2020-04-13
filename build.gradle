@@ -2,6 +2,7 @@ plugins {
     id 'groovy'
     id 'java-gradle-plugin'
     id 'com.gradle.plugin-publish' version '0.10.1'
+    id 'pl.allegro.tech.build.axion-release' version '1.11.0'
 }
 
 sourceCompatibility = 1.8
@@ -10,7 +11,16 @@ repositories {
     jcenter()
 }
 
-version "1.0.0"
+//allow publish key/secret override from environment variable
+task setupPluginUpload {
+    doLast {
+        if (System.env.gradlePublishKey) System.properties.setProperty('gradle.publish.key', System.env.gradlePublishKey)
+        if (System.env.gradlePublishSecret) System.properties.setProperty('gradle.publish.secret', System.env.gradlePublishSecret)
+    }
+    tasks.publishPlugins.dependsOn(delegate)
+}
+
+version scmVersion.version
 group 'com.iptech.gradle'
 description = 'A plugin that allows you work with NUnit output'
 
