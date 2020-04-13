@@ -19,7 +19,8 @@ script:
 
 deploy:
   provider: script
-  script: ./gradlew publishPlugins --info
+  script: ./gradlew publishPlugins
   skip_cleanup: true
   on:
     branch: master
+    tags: true
