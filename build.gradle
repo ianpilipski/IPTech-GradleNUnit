@@ -31,7 +31,7 @@ group 'com.iptech.gradle'
 description = 'A plugin that allows you work with NUnit output'
 
 pluginBundle {
-    website = 'https://github.com/ianpilipski'
+    website = 'https://github.com/ianpilipski/IPTech-GradleNunit'
     vcsUrl = 'https://github.com/ianpilipski/IPTech-GradleNUnit'
     tags = ['nunit', 'iptech']
 }
